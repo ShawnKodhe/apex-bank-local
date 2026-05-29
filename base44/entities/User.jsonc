@@ -1,0 +1,43 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "admin",
+        "user"
+      ],
+      "default": "user"
+    },
+    "kyc_status": {
+      "type": "string",
+      "enum": [
+        "not_submitted",
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "not_submitted"
+    },
+    "account_status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "suspended",
+        "pending"
+      ],
+      "default": "pending"
+    },
+    "total_balance": {
+      "type": "number",
+      "default": 0
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    }
+  }
+}

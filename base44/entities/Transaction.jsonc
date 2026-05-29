@@ -1,0 +1,65 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User who initiated the transaction"
+    },
+    "wallet_id": {
+      "type": "string",
+      "description": "Associated wallet ID"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "deposit",
+        "withdrawal",
+        "transfer_in",
+        "transfer_out"
+      ],
+      "description": "Transaction type"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "completed",
+        "failed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "description": {
+      "type": "string",
+      "description": "Transaction description"
+    },
+    "recipient": {
+      "type": "string",
+      "description": "Recipient address or email"
+    },
+    "reference_id": {
+      "type": "string",
+      "description": "External reference ID"
+    },
+    "fee": {
+      "type": "number",
+      "default": 0,
+      "description": "Transaction fee"
+    }
+  },
+  "required": [
+    "user_email",
+    "wallet_id",
+    "type",
+    "amount"
+  ]
+}

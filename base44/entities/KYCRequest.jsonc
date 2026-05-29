@@ -1,0 +1,76 @@
+{
+  "name": "KYCRequest",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Applicant email"
+    },
+    "full_name": {
+      "type": "string",
+      "description": "Full legal name"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of birth"
+    },
+    "nationality": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "id_type": {
+      "type": "string",
+      "enum": [
+        "passport",
+        "national_id",
+        "drivers_license"
+      ],
+      "description": "Type of ID document"
+    },
+    "id_number": {
+      "type": "string",
+      "description": "ID document number"
+    },
+    "id_document_url": {
+      "type": "string",
+      "description": "Uploaded ID document URL"
+    },
+    "selfie_url": {
+      "type": "string",
+      "description": "Uploaded selfie URL"
+    },
+    "address": {
+      "type": "string",
+      "description": "Residential address"
+    },
+    "phone_number": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "review_notes": {
+      "type": "string",
+      "description": "Admin review notes"
+    },
+    "reviewed_by": {
+      "type": "string",
+      "description": "Admin who reviewed"
+    }
+  },
+  "required": [
+    "user_email",
+    "full_name",
+    "date_of_birth",
+    "id_type",
+    "id_number"
+  ]
+}
