@@ -15,6 +15,7 @@ import Admin from './pages/Admin';
 import SendMoney from './pages/SendMoney';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { Analytics } from '@vercel/analytics/react';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isAuthenticated } = useAuth();
@@ -62,6 +63,7 @@ function App() {
           </Routes>
         </Router>
         <Toaster />
+        <Analytics />
       </QueryClientProvider>
     </AuthProvider>
   )
