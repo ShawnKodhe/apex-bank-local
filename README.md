@@ -1,6 +1,6 @@
 # Apex Bank
 
-Self-hosted finance app for sending money via crypto, Visa card, and M-Pesa. Originally built on [Base44](https://base44.com); this version runs entirely on your own server.
+Self-hosted finance app for sending money via crypto, Visa card, and M-Pesa. This version runs entirely on your own server.
 
 ## Stack
 
